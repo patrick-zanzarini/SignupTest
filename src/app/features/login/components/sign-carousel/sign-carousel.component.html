@@ -1,0 +1,20 @@
+<div class="layout fcolor-iregular" #parent>
+    <div class="carousel">
+        <div class="img-container">
+            <img [src]="currentImg">
+        </div>
+
+        <div class="description-container text-center">
+            <div class="fsize-title">Marcenas mattis egestas</div>
+            <div class="fsize-subtitle text-center">Erdum et malesuada fames ac ante ileum primmer in faucibus
+                uspendisse porta.
+            </div>
+        </div>
+
+        <div class="img-nagigation" *ngIf="!!imgs">
+            <div class="pag-item" *ngFor="let image of imgs" [class.selected]="currentImg === image" (click)="currentImg = image">
+
+            </div>
+        </div>
+    </div>
+</div>

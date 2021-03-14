@@ -1,0 +1,50 @@
+@import "../../../../../styles/_variables.less";
+
+.layout {
+  display: grid;
+  padding-right: 4rem;
+  padding-left: 4rem;
+  height: 100%;
+  place-items: center;
+}
+
+.carousel {
+  display: grid;
+  grid-template-rows: 1fr auto auto;
+  justify-items: center;
+
+  gap: 2rem;
+
+  max-width: 800px;
+}
+
+.description-container {  
+  display: grid;
+  gap: 2rem;
+  max-width: 500px;
+}
+
+img {
+  width: 100%;
+  height: 600px;
+  object-fit: contain;
+}
+
+.pag-item {
+  height: 10px;
+  width: 10px;
+  border-radius: 5px;
+  background-color: @background-regular;
+
+  cursor: pointer;
+
+  &.selected {
+    width: 20px;
+  }
+}
+
+.img-nagigation {
+  display: grid;
+  grid-auto-flow: column;
+  gap: .5em;
+}

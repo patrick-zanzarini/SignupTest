@@ -1,5 +1,7 @@
 <div class="layout">
-    <div class="carousel"></div>
+    <div class="carousel">
+        <iv-sign-carousel></iv-sign-carousel>
+    </div>
 
     <div class="content">        
         <div>
@@ -14,6 +16,13 @@
                     <div class="title fsize-title">Gettings Started</div>
         
                     <iv-sign-up-form></iv-sign-up-form>
+
+                    <div class="horizontal-center">
+                        <div>
+                            <span>Already in <strong>Invision</strong>? </span>
+                            <a class="link" [routerLink]="['/login/sign-in']">Sign in</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
