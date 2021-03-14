@@ -1,0 +1,24 @@
+@import "../_variables.less";
+
+@font-weights: {
+  regular: @font-weight-default;
+  bold: 700;
+};
+
+@font-sizes: {
+  small: 14px;
+  medium: 16px;
+  title: 30px;
+};
+
+each(@font-weights, {
+  .fweight-@{key} {
+    font-weight: @value;
+  }
+});
+
+each(@font-sizes, {
+.fsize-@{key} {
+    font-size: @value;
+  }
+});

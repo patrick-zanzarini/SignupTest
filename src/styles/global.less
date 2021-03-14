@@ -1,6 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&display=swap');
+@import "./_reset.less";
+@import "./components/_buttons.less";
+@import "./components/_fonts.less";
 
 html,
 body {
   min-height: 100vh;
+}
+
+body {
+  font-family: @font-family-default;
+  font-weight: @font-weight-default;
+  color: @foreground-muted;
 }
