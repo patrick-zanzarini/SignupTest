@@ -4,6 +4,8 @@
 
 .button {
   display: flex;
+  align-items: center;
+
   font-family: @font-family-default;
   font-weight: @font-weight-default;
 
@@ -11,7 +13,7 @@
   color: @background-regular;
 
   transition: 0.1s;
-  padding: 0.75em;
+  padding: 0.75em 1.5em;
   border-radius: 1.5em;
 
   height: @button-height;
@@ -32,20 +34,12 @@
 
 
 .button.google {
-  align-items: center;
-
   background-color: @background-regular;
   color: @foreground-regular;
-  
-  padding: 0.75em;
-  border-radius: 1.5em;
-
-  border: unset;
-  outline: unset;
 
   img {
     height: @button-height - 10px;
-    margin-right: .5em;
+    margin-right: 1em;
   }
 
   box-shadow: 0px 3px 6px fade(@foreground-regular, 20%);

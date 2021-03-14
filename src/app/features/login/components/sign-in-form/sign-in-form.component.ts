@@ -10,6 +10,7 @@ import { SignInModel } from '../../models/sign-in.model';
 })
 export class SignInFormComponent {
   @Output() signIn = new EventEmitter<SignInModel>();
+  @Output() signInGoogle = new EventEmitter();
 
   signInForm: FormGroup = this.fb.group({
     email: [{ value: '', disabled: false }, [Validators.email, Validators.required]],

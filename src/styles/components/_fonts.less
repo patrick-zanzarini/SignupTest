@@ -1,14 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;700;800&display=swap');
 @import "../_variables.less";
 
 @font-weights: {
   regular: @font-weight-default;
   bold: 700;
+  heavy: 800;
 };
 
 @font-sizes: {
   small: 14px;
   medium: 16px;
   title: 30px;
+  large: 35px
+};
+
+@font-colors: {
+  regular: @foreground-regular;
+  muted: @foreground-muted;
+  accent: @accent-color;
 };
 
 each(@font-weights, {
@@ -20,5 +29,11 @@ each(@font-weights, {
 each(@font-sizes, {
 .fsize-@{key} {
     font-size: @value;
+  }
+});
+
+each(@font-colors, {
+  .fcolor-@{key} {
+    color: @value;
   }
 });
