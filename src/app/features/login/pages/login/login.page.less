@@ -16,7 +16,7 @@
   align-items: center;
 }
 
-.content-layout {
+.signup {
   display: flex;
   flex-direction: column;
   > * {
@@ -33,17 +33,31 @@
   justify-items: center;
 }
 
+.invision {
+  width: 100%;
+  align-self: end;
+  margin-bottom: 4rem;
+}
+
 @media only screen and (min-width: @mobile-threshold) {
   .layout {
     grid-template-columns: 1fr 1fr;
   }
 
-  .content {
-    place-items: center;
+  .width-limit {
+    max-width: 400px;
+    width: 100%;
   }
 
-  .content-layout {
-    max-width: 500px;
+  .width-limit-large {
+    max-width: 700px;
     width: 100%;
+  }
+
+  .content {
+    > div {
+      display: grid;
+      justify-items: center;
+    }
   }
 }
