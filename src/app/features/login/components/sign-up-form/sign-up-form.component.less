@@ -1,0 +1,33 @@
+@import "../../../../../styles/_variables.less";
+
+.layout {
+  display: grid;
+  gap: 2em;
+}
+
+.form-layout {
+  display: grid;
+  gap: 1em;
+}
+
+.or-layout {
+  display: grid;
+  margin: 0 5rem;
+  grid-template-columns: 1fr auto 1fr;
+  gap : 1em;
+  hr {
+    width: 100%;
+    border: unset;
+    border-bottom: 1px solid fade(@foreground-muted, 50%);
+  }
+}
+
+.horizontal-center {
+  display: grid;
+  justify-items: center;
+}
+
+.signin {
+  padding-left: 3em;
+  padding-right: 3em;
+}

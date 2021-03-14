@@ -1,0 +1,58 @@
+<form [formGroup]="signUpForm" (ngSubmit)="trySignIn()">
+    <div class="layout">
+
+        <div class="form-layout">
+            <div class="input-group" [class.danger]="isInvalid('fullname')">
+                <label> Full Name </label>
+                <input type="text" class="input" formControlName="fullname" />
+            </div>
+
+            <div class="input-group" [class.danger]="isInvalid('email')">
+                <label> Email </label>
+                <input type="text" class="input" formControlName="email" />
+            </div>
+
+            <div class="input-group" [class.danger]="isInvalid('password')">
+                <label> Password </label>
+                <input type="password" class="input" formControlName="password"
+                    [class.danger]="isInvalid('password')" />
+            </div>
+        </div>
+
+        <div class="horizontal-center">
+            <button class="button signin" type="submit">
+                Sign Up
+            </button>
+        </div>
+        <div class="or-layout">
+            <hr>
+            <div>
+                Or
+            </div>
+            <hr>
+        </div>
+
+        <div class="horizontal-center">
+            <button (click)="signUpGoogle.emit()" class="button google">
+                <img src="assets/svgs/google_logo.svg">
+                Sign up with Google
+            </button>
+        </div>
+
+        <div class="text-center">
+            By signing up, you agree to <strong>Invision</strong>
+            <br>
+            <span>
+                <a class="link" href="#">
+                    Terms of Conditions
+                </a>
+            </span>
+            and
+            <span>
+                <a class="link" href="#">
+                    Privacy Policy
+                </a>
+            </span>
+        </div>
+    </div>
+</form>

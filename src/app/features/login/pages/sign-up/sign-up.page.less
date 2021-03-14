@@ -1,0 +1,63 @@
+@import "../../../../../styles/_variables.less";
+
+.layout {
+  display: grid;
+  min-height: 100vh;
+  grid-template-columns: 0 1fr;
+}
+
+.carousel {
+  background-color: @accent-color;
+}
+
+.content {
+  display: grid;
+  margin: 2rem;
+  align-items: center;
+}
+
+.signup {
+  display: flex;
+  flex-direction: column;
+  > * {
+    margin-bottom: 4rem;
+  }
+
+  .title {
+    text-align: center;
+  }
+}
+
+.horizontal-center {
+  display: grid;
+  justify-items: center;
+}
+
+.invision {
+  width: 100%;
+  align-self: end;
+  margin-bottom: 4rem;
+}
+
+@media only screen and (min-width: @mobile-threshold) {
+  .layout {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .width-limit {
+    max-width: 400px;
+    width: 100%;
+  }
+
+  .width-limit-large {
+    max-width: 700px;
+    width: 100%;
+  }
+
+  .content {
+    > div {
+      display: grid;
+      justify-items: center;
+    }
+  }
+}
