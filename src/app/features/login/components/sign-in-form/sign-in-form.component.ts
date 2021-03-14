@@ -31,4 +31,12 @@ export class SignInFormComponent {
       this.signIn.emit(event);
     }
   }
+
+  isInvalid(propertyName: string) {
+    const control = this.signInForm.get(propertyName);
+    if (!control.touched)
+      return false;
+
+    return control.invalid;
+  }
 }

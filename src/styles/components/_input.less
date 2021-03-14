@@ -1,0 +1,24 @@
+@import "../_variables.less";
+
+@input-height: 35px;
+
+.input {
+  height: @input-height;
+
+  border: unset;
+  outline: unset;
+
+  font-family: @font-family-default;
+  font-weight: @font-weight-default;
+  font-size: @font-size-medium;
+
+  border-bottom: 1px solid @foreground-muted;
+
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+}
+
+.danger .input,
+.input.danger {
+  border-bottom: 1px solid @danger-color;
+}

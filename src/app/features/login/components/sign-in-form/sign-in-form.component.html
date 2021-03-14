@@ -2,14 +2,14 @@
     <div class="layout">
 
         <div class="form-layout">
-            <div class="input-group">
+            <div class="input-group" [class.danger]="isInvalid('email')">
                 <label> Email </label>
-                <input type="text" formControlName="email" />
+                <input type="text" class="input" formControlName="email" />
             </div>
     
-            <div class="input-group">
+            <div class="input-group" [class.danger]="isInvalid('password')">
                 <label> Password </label>
-                <input type="password" formControlName="password" />
+                <input type="password" class="input" formControlName="password" [class.danger]="isInvalid('password')"/>
             </div>
     
             <div class="flex-end-container">
