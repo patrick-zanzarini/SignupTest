@@ -45,4 +45,11 @@ export class SignUpFormComponent {
 
     return control.invalid;
   }
+
+  hasError(propertyName: string, error: string) {
+    const control = this.signUpForm.get(propertyName);
+    if (!control.touched)
+      return false;
+    return control.hasError(error);
+  }
 }

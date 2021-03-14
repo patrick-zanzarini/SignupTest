@@ -5,17 +5,33 @@
             <div class="input-group" [class.danger]="isInvalid('fullname')">
                 <label> Full Name </label>
                 <input type="text" class="input" formControlName="fullname" />
+                <div *ngIf="hasError('email', 'required')">
+                    This field should not be empty
+                </div>
             </div>
 
             <div class="input-group" [class.danger]="isInvalid('email')">
                 <label> Email </label>
                 <input type="text" class="input" formControlName="email" />
+                <div *ngIf="hasError('email', 'required')">
+                    This field should not be empty
+                </div>
+                <div *ngIf="hasError('email', 'email')">
+                    Email format incorrect
+                </div>
             </div>
 
             <div class="input-group" [class.danger]="isInvalid('password')">
                 <label> Password </label>
                 <input type="password" class="input" formControlName="password"
                     [class.danger]="isInvalid('password')" />
+
+                <div *ngIf="hasError('password', 'required')">
+                    This field should not be empty
+                </div>
+                <div *ngIf="hasError('password', 'minlength')">
+                    Password length should be 6 or more
+                </div>
             </div>
         </div>
 
@@ -39,7 +55,7 @@
             </button>
         </div>
 
-        <div class="text-center">
+        <div class="text-center terms">
             By signing up, you agree to <strong>Invision</strong>
             <br>
             <span>

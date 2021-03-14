@@ -32,11 +32,18 @@ export class SignInFormComponent {
     }
   }
 
-  isInvalid(propertyName: string) {
+  isInvalid(propertyName: string): boolean {
     const control = this.signInForm.get(propertyName);
     if (!control.touched)
       return false;
 
     return control.invalid;
+  }
+
+  hasError(propertyName: string, error: string) {
+    const control = this.signInForm.get(propertyName);
+    if (!control.touched)
+      return false;
+    return control.hasError(error);
   }
 }
