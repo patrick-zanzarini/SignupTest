@@ -13,16 +13,19 @@
 .content {
   display: grid;
   margin: 2rem;
-}
-
-.title {
-  text-align: center;
-  margin-bottom: 5rem;
+  align-items: center;
 }
 
 .content-layout {
-  display: grid;
-  gap: 1em;
+  display: flex;
+  flex-direction: column;
+  > * {
+    margin-bottom: 3rem;
+  }
+
+  .title {
+    text-align: center;
+  }
 }
 
 .horizontal-center {
@@ -31,11 +34,16 @@
 }
 
 @media only screen and (min-width: @mobile-threshold) {
-  .content {
-    align-items: center;
-  }
-
   .layout {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .content {
+    place-items: center;
+  }
+
+  .content-layout {
+    max-width: 500px;
+    width: 100%;
   }
 }

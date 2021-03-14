@@ -1,21 +1,35 @@
 <form [formGroup]="signInForm" (ngSubmit)="trySignIn()">
     <div class="layout">
-        <div class="input-group">
-            <label> Email </label>
-            <input type="text" formControlName="email" />
+
+        <div class="form-layout">
+            <div class="input-group">
+                <label> Email </label>
+                <input type="text" formControlName="email" />
+            </div>
+    
+            <div class="input-group">
+                <label> Password </label>
+                <input type="password" formControlName="password" />
+            </div>
+    
+            <div class="flex-end-container">
+                <a href="#">
+                    Forgot password?
+                </a>
+            </div>
         </div>
-        <div class="input-group">
-            <label> Password </label>
-            <input type="password" formControlName="password" />
-        </div>
-        <div class="flex-end-container">
-            <a href="#">
-                Forgot password?
-            </a>
-        </div>
-        <div>
-            <button type="submit">
+
+        <div class="horizontal-center">
+            <button class="button signin" type="submit">
                 Sign In
+            </button>
+        </div>
+        <div class="text-center">Or</div>
+
+        <div class="horizontal-center">
+            <button class="button google">
+                <img src="assets/svgs/google_logo.svg">
+                Sign in with Google
             </button>
         </div>
     </div>
