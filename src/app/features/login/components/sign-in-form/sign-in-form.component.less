@@ -1,3 +1,5 @@
+@import "../../../../../styles/_variables.less";
+
 div {
   display: grid;
 }
@@ -8,6 +10,17 @@ div {
 
 .form-layout {
   gap: 1em;
+}
+
+.or-layout {
+  margin: 0 5rem;
+  grid-template-columns: 1fr auto 1fr;
+  gap : 1em;
+  hr {
+    width: 100%;
+    border: unset;
+    border-bottom: 1px solid fade(@foreground-muted, 50%);
+  }
 }
 
 
