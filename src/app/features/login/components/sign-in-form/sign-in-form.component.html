@@ -1,0 +1,22 @@
+<form [formGroup]="signInForm" (ngSubmit)="trySignIn()">
+    <div class="layout">
+        <div class="input-group">
+            <label> Email </label>
+            <input type="text" formControlName="email" />
+        </div>
+        <div class="input-group">
+            <label> Password </label>
+            <input type="password" formControlName="password" />
+        </div>
+        <div class="flex-end-container">
+            <a href="#">
+                Forgot password?
+            </a>
+        </div>
+        <div>
+            <button type="submit">
+                Sign In
+            </button>
+        </div>
+    </div>
+</form>
